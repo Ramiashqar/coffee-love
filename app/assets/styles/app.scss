@@ -1,0 +1,64 @@
+@charset "UTF-8";
+// MAIN
+// this comment appears on the final version of the cerated css file:
+/* 
+#ff0000 :: This entire css code is written by node:sass. So to apply maintenance and modifications it's a better practice to do it using the sass folders not the main css file :: #ff0000
+*/
+
+@import "abstract/functions";
+@import "abstract/mixins";
+@import "abstract/variables";
+
+@import "base/animations";
+@import "base/global";
+@import "base/typography";
+@import "base/utilities";
+
+// @import "components/";
+
+@import "layout/footer";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/navigation";
+
+@import "pages/home";
+
+
+//materialzeCSS
+
+// Color
+@import "materialize/color-variables";
+@import "materialize/color-classes";
+// Variables;
+@import "materialize/variables";
+// Reset
+@import "materialize/normalize";
+// components
+@import "materialize/global";
+@import "materialize/badges";
+@import "materialize/icons-material-design";
+@import "materialize/grid";
+@import "materialize/navbar";
+@import "materialize/typography";
+@import "materialize/transitions";
+@import "materialize/cards";
+@import "materialize/toast";
+@import "materialize/tabs";
+@import "materialize/tooltip";
+@import "materialize/buttons";
+@import "materialize/dropdown";
+@import "materialize/waves";
+@import "materialize/modal";
+@import "materialize/collapsible";
+@import "materialize/chips";
+@import "materialize/materialbox";
+@import "materialize/forms/forms";
+@import "materialize/table_of_contents";
+@import "materialize/sidenav";
+@import "materialize/preloader";
+@import "materialize/slider";
+@import "materialize/carousel";
+@import "materialize/tapTarget";
+@import "materialize/pulse";
+@import "materialize/datepicker";
+@import "materialize/timepicker";
