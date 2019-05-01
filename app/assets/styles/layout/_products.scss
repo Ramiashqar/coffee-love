@@ -1,0 +1,37 @@
+//PRODUCTS
+.products {
+  .card{
+    // height: 25rem;
+    // &-image{
+    //   height: 20rem;
+    // }
+  }
+  margin: 2rem 3rem;
+  .modal-overlay {
+    transition: opacity .5s ease;
+    &:hover {
+      opacity: 0.9 !important;
+    }
+  }
+  .modal {
+    top: 30% !important;
+  }
+}
+nav.back {
+  height: 6rem;
+  z-index: 1100;
+  position: fixed !important;
+  top: -20px;
+  box-shadow: black 0 0 4rem;
+  padding-top: 1rem;
+  padding-left: 5rem;
+  cursor: pointer;
+}
+img.top-image {
+  position: fixed !important;
+  z-index: 1003;
+  top: 20%;
+  left: 25%;
+  height: 10rem;
+  box-shadow: black 0 0 1rem;
+}
