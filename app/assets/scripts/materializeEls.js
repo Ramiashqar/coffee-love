@@ -1,7 +1,17 @@
-import ColorThief from "../3rd-party/color-thief";
+"use strict";
+
+import ColorThief from "./3rd-party/color-thief";
+// CHECK IF IT IS SAFARI, BECAUSE CANVAS DOES NOT WORK WELL ON SAFARI
+const isSafari =
+  navigator.vendor &&
+  navigator.vendor.indexOf("Apple") > -1 &&
+  navigator.userAgent &&
+  navigator.userAgent.indexOf("CriOS") == -1 &&
+  navigator.userAgent.indexOf("FxiOS") == -1;
+// MODALS
 document.addEventListener("DOMContentLoaded", function() {
-  var elems = document.querySelectorAll(".modal");
-  var instances = M.Modal.init(elems, {
+  const modalEl = document.querySelectorAll(".modal");
+  const instances = M.Modal.init(modalEl, {
     opacity: 1,
     onOpenStart: () => {
       createNav();
@@ -26,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const closeFromNav = () => {
     const newNav = document.querySelector(".back");
     newNav.addEventListener("click", () => {
-      elems.forEach(el => {
+      modalEl.forEach(el => {
         const instance = M.Modal.getInstance(el);
         instance.close();
         console.log(instance.id);
@@ -53,11 +63,15 @@ document.addEventListener("DOMContentLoaded", function() {
             topImage.setAttribute("crossOrigin", "anonymous");
             topImage.classList.add("top-image");
             document.querySelector("body").appendChild(topImage);
-            const colorThief = new ColorThief();
-            const newColor = colorThief.getPalette(topImage, 8);
-            newNav.style.backgroundColor = `rgb(${newColor[2][0]}, ${
-              newColor[2][1]
-            }, ${newColor[2][2]})`;
+            if (!isSafari) {
+              const colorThief = new ColorThief();
+              const newColor = colorThief.getPalette(topImage, 8);
+              newNav.style.backgroundColor = `rgb(${newColor[2][0]}, ${
+                newColor[2][1]
+              }, ${newColor[2][2]})`;
+            } else {
+              newNav.style.backgroundColor = "#3cbefa";
+            }
           }
         });
       }
@@ -70,18 +84,30 @@ document.addEventListener("DOMContentLoaded", function() {
       anchor.forEach(el => {
         if (el.href.includes(`#modal${i + 1}`)) {
           const topImage = document.querySelector(".top-image");
-          const colorThief = new ColorThief();
-          const newColor = colorThief.getPalette(topImage, 2);
-          const modalOverlay = document.querySelector(".modal-overlay");
-          modalOverlay.style.backgroundColor = `rgb(${newColor[0][0]}, ${
-            newColor[0][1]
-          }, ${newColor[0][2]})`;
+
+          if (!isSafari) {
+            const colorThief = new ColorThief();
+            const newColor = colorThief.getPalette(topImage, 2);
+            const modalOverlay = document.querySelector(".modal-overlay");
+            modalOverlay.style.backgroundColor = `rgb(${newColor[0][0]}, ${
+              newColor[0][1]
+            }, ${newColor[0][2]})`;
+          }
         }
       });
     }
   };
 });
 
-// let colorThief = new ColorThief();
-// let sourceImage = document.getElementById("image");
-// console.log(colorThief.getColor(sourceImage));
+// TOOLTIPS
+document.addEventListener("DOMContentLoaded", function() {
+  const toolTip = document.querySelectorAll(".tooltipped");
+  const instances = M.Tooltip.init(toolTip);
+});
+
+//SIDENAV
+
+document.addEventListener("DOMContentLoaded", function() {
+  var elems = document.querySelectorAll(".sidenav");
+  var instances = M.Sidenav.init(elems);
+});

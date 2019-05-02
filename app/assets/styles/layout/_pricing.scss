@@ -1,0 +1,8 @@
+.pricing {
+  margin: 5rem 0 0 0;
+  background-color: #535f64;
+  nav.go-back-pricing {
+    @include backNav;
+    background-color: #fd9829;
+  }
+}

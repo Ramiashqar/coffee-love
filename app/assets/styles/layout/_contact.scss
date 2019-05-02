@@ -1,0 +1,13 @@
+.contact {
+  margin: 8rem 2rem 0 2rem;
+  &__container {
+    margin: 0 auto !important;
+  }
+  nav.go-back-contact {
+    @include backNav;
+    background-color: #3cbefa;
+  }
+  .submit {
+    margin-top: 2rem;
+  }
+}

@@ -1,18 +1,24 @@
 // NAVIGATION
-.navigation{
-    background-color: white;
-   box-shadow: none;
-   height: 5rem;
-    .left{
-        margin-left:5rem;
+.navigation {
+  background-color: white;
+  // box-shadow: none;
+  // height: 5rem;
+  .left {
+    margin-left: 5rem;
+  }
+  .right {
+    margin-right: 5rem;
+  }
+  .logo-image {
+    height: 4rem;
+    @media only screen and (min-width: 993px) and (max-width: 1150px) {
+      width: 13rem;
     }
-    .right{
-        margin-right:5rem;
+  }
+  &__item {
+    height: 2rem;
+    @media only screen and (min-width: 993px) and (max-width: 1150px) {
+      width: 9.3rem;
     }
-    .brand-logo .logo-image{
-        height: 4rem;
-    }
-    &__item{
-        height: 2rem;
-    }
+  }
 }

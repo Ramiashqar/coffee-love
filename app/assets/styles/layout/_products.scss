@@ -1,20 +1,34 @@
 //PRODUCTS
 .products {
-  .card{
-    // height: 25rem;
-    // &-image{
-    //   height: 20rem;
-    // }
-  }
   margin: 2rem 3rem;
   .modal-overlay {
-    transition: opacity .5s ease;
+    transition: opacity 0.5s ease;
     &:hover {
       opacity: 0.9 !important;
     }
   }
   .modal {
     top: 30% !important;
+    height: 25rem;
+    &-content {
+      &__description {
+        margin: 5rem 2rem 0 2rem;
+      }
+    }
+    &-footer {
+      text-align: center !important;
+      &__price {
+        background-color: rgb(236, 73, 73);
+        margin: 0 auto;
+        padding: 1rem 0.2rem 0 0.2rem;
+        font-size: 1.6rem;
+        color: white;
+        font-weight: bold;
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
+      }
+    }
   }
 }
 nav.back {

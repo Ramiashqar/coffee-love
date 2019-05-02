@@ -15,22 +15,67 @@
 
 <body>
   <!-- NAVIGATION -->
-  <nav class="navigation">
+  <!-- <nav id="nav" class="navigation">
     <div class="nav-wrapper">
-      <a href="index.html" title="Home Page" class="brand-logo center"><img class="logo-image"
+      <a href="index.html" title="Home Page" class="brand-logo center"><img class="logo-image responsive-img"
           src="assets/images/cofee-logo.png" alt="Coffee Love"></a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="#ourMenu" class="waves-effect waves-light"><img class="navigation__item " src="assets/images/our-menu.png" alt="our menu"></a></li>
-        <li><a href="#" class="waves-effect waves-light modal-trigger"><img class="navigation__item " src="assets/images/pricing.png" alt="pricing"></a></li>
+        <li><a href="#ourMenu" class="waves-effect waves-light"><img class="navigation__item "
+              src="assets/images/our-menu.png" alt="our menu"></a></li>
+        <li class="pricing-btn"><a href="#pricing" class="waves-effect waves-light modal-trigger"><img
+              class="navigation__item " src="assets/images/pricing.png" alt="pricing"></a></li>
       </ul>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#" class="waves-effect waves-light"><img class="navigation__item " src="assets/images/suggest-drinks.png" alt="Suggest Drinks"></a>
+        <li class="suggest-btn"><a href="#suggest" class="waves-effect waves-light"><img class="navigation__item "
+              src="assets/images/suggest-drinks.png" alt="Suggest Drinks"></a>
         </li>
-        <li><a href="#" class="waves-effect waves-light"><img class="navigation__item " src="assets/images/contact-us.png" alt="contact-us"></a></li>
+        <li class="contact-btn"><a href="#contact" class="waves-effect waves-light"><img class="navigation__item "
+              src="assets/images/contact-us.png" alt="contact-us"></a></li>
       </ul>
     </div>
-    
+  </nav> -->
+
+  <nav id="nav" class="navigation">
+    <div class="nav-wrapper">
+      <a href="index.html" title="Home Page" class="brand-logo center"><img class="logo-image responsive-img"
+          src="assets/images/cofee-logo.png" alt="Coffee Love"></a>
+      <a href="#" data-target="showOnMobile" class="sidenav-trigger"><i class="material-icons red-text">menu</i></a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="#ourMenu" class="waves-effect waves-light"><img class="navigation__item "
+              src="assets/images/our-menu.png" alt="our menu"></a></li>
+        <li class="pricing-btn"><a href="#pricing" class="waves-effect waves-light modal-trigger"><img
+              class="navigation__item " src="assets/images/pricing.png" alt="pricing"></a></li>
+      </ul>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li class="suggest-btn"><a href="#suggest" class="waves-effect waves-light"><img class="navigation__item "
+              src="assets/images/suggest-drinks.png" alt="Suggest Drinks"></a>
+        </li>
+        <li class="contact-btn"><a href="#contact" class="waves-effect waves-light"><img class="navigation__item "
+              src="assets/images/contact-us.png" alt="contact-us"></a></li>
+      </ul>
+    </div>
   </nav>
+
+  <ul class="sidenav" id="showOnMobile">
+    <li>      <a href="index.html" title="Home Page" class="brand-logo center"><img class="logo-image responsive-img"
+      src="assets/images/cofee-logo.png" alt="Coffee Love"></a></li>
+    <li><a href="#ourMenu" class="waves-effect waves-light sidenav-close"><img class="navigation__item "
+          src="assets/images/our-menu.png" alt="our menu"></a></li>
+    <li class="pricing-btn"><a href="#pricing" class="waves-effect waves-light modal-trigger sidenav-close"><img
+          class="navigation__item " src="assets/images/pricing.png" alt="pricing"></a></li>
+    <li class="suggest-btn"><a href="#suggest" class="waves-effect waves-light sidenav-close"><img class="navigation__item "
+          src="assets/images/suggest-drinks.png" alt="Suggest Drinks"></a>
+    </li>
+    <li class="contact-btn"><a href="#contact" class="waves-effect waves-light sidenav-close"><img class="navigation__item "
+          src="assets/images/contact-us.png" alt="contact-us"></a></li>
+  </ul>
+
+  <!-- <ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">Sass</a></li>
+    <li><a href="badges.html">Components</a></li>
+    <li><a href="collapsible.html">Javascript</a></li>
+    <li><a href="mobile.html">Mobile</a></li>
+  </ul> -->
 
   <!-- HOME -->
   <main class="header">
@@ -48,58 +93,73 @@
     <!-- ROW 1 -->
     <div class="row">
       <!-- PRODUCT 1 -->
-      <div class="col m4">
+      <div class="col m3 offset-m1">
         <div class="card">
           <a class="card-image modal-trigger waves-effect waves-light" href="#modal1">
-            <img src="assets/images/black-coffeeX3.png"  alt="Black Coffee">
+            <img src="assets/images/black-coffeeX3.png" alt="Black Coffee">
           </a>
           <div class="card-content">
-            <h4>Black Coffee</h4>
+            <h6>Black Coffee</h6>
           </div>
           <div id="modal1" class="modal">
             <div class="modal-content">
               <h4 class="center">Black Coffee</h4>
-              <p>A bunch of text</p>
+              <p class="modal-content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                eligendi nostrum eum voluptates quo repudiandae distinctio unde ullam amet iste, dicta earum. Tempora
+                nisi alias quos nobis sit corporis similique illo ea obcaecati doloremque non unde placeat esse, odit
+                aliquid ducimus natus ab a delectus fugiat dolor saepe officia atque incidunt. Laboriosam id et labore
+                consectetur atque illum, neque qui? Optio, vero velit?</p>
             </div>
             <div class="modal-footer">
+              <p class="modal-footer__price">$9.99</p>
             </div>
           </div>
         </div>
       </div>
       <!-- PRODUCT 2 -->
-      <div class="col m4">
+      <div class="col m3">
         <div class="card">
           <a class="card-image modal-trigger waves-effect waves-light" href="#modal2">
             <img src="assets/images/caffe-amercanoX3.png" alt="Caffe Amercano">
           </a>
           <div class="card-content">
-            <h4>Caffe Amercano</h4>
+            <h6>Caffe Amercano</h6>
           </div>
           <div id="modal2" class="modal">
             <div class="modal-content">
               <h4 class="center">Caffe Amercano</h4>
-              <p>A bunch of text</p>
+              <p class="modal-content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                eligendi nostrum eum voluptates quo repudiandae distinctio unde ullam amet iste, dicta earum. Tempora
+                nisi alias quos nobis sit corporis similique illo ea obcaecati doloremque non unde placeat esse, odit
+                aliquid ducimus natus ab a delectus fugiat dolor saepe officia atque incidunt. Laboriosam id et labore
+                consectetur atque illum, neque qui? Optio, vero velit?</p>
             </div>
             <div class="modal-footer">
+              <p class="modal-footer__price">$9.99</p>
             </div>
           </div>
         </div>
       </div>
       <!-- PRODUCT 3 -->
-      <div class="col m4">
+      <div class="col m3">
         <div class="card">
           <a class="card-image modal-trigger waves-effect waves-light" href="#modal3">
             <img src="assets/images/caffe-latieX3.png" alt="Caffe Latie">
           </a>
           <div class="card-content">
-            <h4>Caffe Latie</h4>
+            <h6>Caffe Latie</h6>
           </div>
           <div id="modal3" class="modal">
             <div class="modal-content">
               <h4 class="center">Caffe Latie</h4>
-              <p>A bunch of text</p>
+              <p class="modal-content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                eligendi nostrum eum voluptates quo repudiandae distinctio unde ullam amet iste, dicta earum. Tempora
+                nisi alias quos nobis sit corporis similique illo ea obcaecati doloremque non unde placeat esse, odit
+                aliquid ducimus natus ab a delectus fugiat dolor saepe officia atque incidunt. Laboriosam id et labore
+                consectetur atque illum, neque qui? Optio, vero velit?</p>
             </div>
             <div class="modal-footer">
+              <p class="modal-footer__price">$9.99</p>
             </div>
           </div>
         </div>
@@ -108,58 +168,73 @@
     <!-- ROW 2 -->
     <div class="row">
       <!-- PRODUCT 4 -->
-      <div class="col m4">
+      <div class="col m3 offset-m1">
         <div class="card">
           <a class="card-image modal-trigger waves-effect waves-light" href="#modal4">
             <img src="assets/images/espressoX3.png" alt="Espresso">
           </a>
           <div class="card-content">
-            <h4>Espresso</h4>
+            <h6>Espresso</h6>
           </div>
           <div id="modal4" class="modal">
             <div class="modal-content">
               <h4 class="center">Espresso</h4>
-              <p>A bunch of text</p>
+              <p class="modal-content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                eligendi nostrum eum voluptates quo repudiandae distinctio unde ullam amet iste, dicta earum. Tempora
+                nisi alias quos nobis sit corporis similique illo ea obcaecati doloremque non unde placeat esse, odit
+                aliquid ducimus natus ab a delectus fugiat dolor saepe officia atque incidunt. Laboriosam id et labore
+                consectetur atque illum, neque qui? Optio, vero velit?</p>
             </div>
             <div class="modal-footer">
+              <p class="modal-footer__price">$9.99</p>
             </div>
           </div>
         </div>
       </div>
       <!-- PRODUCT 5 -->
-      <div class="col m4">
+      <div class="col m3">
         <div class="card">
           <a class="card-image modal-trigger waves-effect waves-light" href="#modal5">
             <img src="assets/images/cappuccinoX3.png" alt="Cappuccino">
           </a>
           <div class="card-content">
-            <h4>Cappuccino</h4>
+            <h6>Cappuccino</h6>
           </div>
           <div id="modal5" class="modal">
             <div class="modal-content">
               <h4 class="center">Cappuccino</h4>
-              <p>A bunch of text</p>
+              <p class="modal-content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                eligendi nostrum eum voluptates quo repudiandae distinctio unde ullam amet iste, dicta earum. Tempora
+                nisi alias quos nobis sit corporis similique illo ea obcaecati doloremque non unde placeat esse, odit
+                aliquid ducimus natus ab a delectus fugiat dolor saepe officia atque incidunt. Laboriosam id et labore
+                consectetur atque illum, neque qui? Optio, vero velit?</p>
             </div>
             <div class="modal-footer">
+              <p class="modal-footer__price">$9.99</p>
             </div>
           </div>
         </div>
       </div>
       <!-- PRODUCT 6 -->
-      <div class="col m4">
+      <div class="col m3">
         <div class="card">
           <a class="card-image modal-trigger waves-effect waves-light" href="#modal6">
             <img src="assets/images/ice-coffeeX3.png" alt="Ice Coffee">
           </a>
           <div class="card-content">
-            <h4>Ice Coffee</h4>
+            <h6>Ice Coffee</h6>
           </div>
           <div id="modal6" class="modal">
             <div class="modal-content">
               <h4 class="center">Ice Coffee</h4>
-              <p>A bunch of text</p>
+              <p class="modal-content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                eligendi nostrum eum voluptates quo repudiandae distinctio unde ullam amet iste, dicta earum. Tempora
+                nisi alias quos nobis sit corporis similique illo ea obcaecati doloremque non unde placeat esse, odit
+                aliquid ducimus natus ab a delectus fugiat dolor saepe officia atque incidunt. Laboriosam id et labore
+                consectetur atque illum, neque qui? Optio, vero velit?</p>
             </div>
             <div class="modal-footer">
+              <p class="modal-footer__price">$9.99</p>
             </div>
           </div>
         </div>
@@ -168,65 +243,289 @@
     <!-- ROW 3 -->
     <div class="row">
       <!-- PRODUCT 7 -->
-      <div class="col m4">
+      <div class="col m3 offset-m1">
         <div class="card">
           <a class="card-image modal-trigger waves-effect waves-light" href="#modal7">
             <img src="assets/images/flat-whiteX3.png" alt="Flat White">
           </a>
           <div class="card-content">
-            <h4>Flat White</h4>
+            <h6>Flat White</h6>
           </div>
           <div id="modal7" class="modal">
             <div class="modal-content">
               <h4 class="center">Flat White</h4>
-              <p>A bunch of text</p>
+              <p class="modal-content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                eligendi nostrum eum voluptates quo repudiandae distinctio unde ullam amet iste, dicta earum. Tempora
+                nisi alias quos nobis sit corporis similique illo ea obcaecati doloremque non unde placeat esse, odit
+                aliquid ducimus natus ab a delectus fugiat dolor saepe officia atque incidunt. Laboriosam id et labore
+                consectetur atque illum, neque qui? Optio, vero velit?</p>
             </div>
             <div class="modal-footer">
+              <p class="modal-footer__price">$9.99</p>
             </div>
           </div>
         </div>
       </div>
       <!-- PRODUCT 8 -->
-      <div class="col m4">
+      <div class="col m3">
         <div class="card">
           <a class="card-image modal-trigger waves-effect waves-light" href="#modal8">
             <img src="assets/images/cafee-mochaX3.png" alt="Cafee Mocha">
           </a>
           <div class="card-content">
-            <h4>Cafee Mocha</h4>
+            <h6>Cafee Mocha</h6>
           </div>
           <div id="modal8" class="modal">
             <div class="modal-content">
               <h4 class="center">Cafee Mocha</h4>
-              <p>A bunch of text</p>
+              <p class="modal-content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                eligendi nostrum eum voluptates quo repudiandae distinctio unde ullam amet iste, dicta earum. Tempora
+                nisi alias quos nobis sit corporis similique illo ea obcaecati doloremque non unde placeat esse, odit
+                aliquid ducimus natus ab a delectus fugiat dolor saepe officia atque incidunt. Laboriosam id et labore
+                consectetur atque illum, neque qui? Optio, vero velit?</p>
             </div>
             <div class="modal-footer">
+              <p class="modal-footer__price">$9.99</p>
             </div>
           </div>
         </div>
       </div>
       <!-- PRODUCT 9 -->
-      <div class="col m4">
+      <div class="col m3">
         <div class="card">
           <a class="card-image modal-trigger waves-effect waves-light" href="#modal9">
             <img src="assets/images/long-blackX3.png" alt="Long Black">
           </a>
           <div class="card-content">
-            <h4>Long Black</h4>
+            <h6>Long Black</h6>
           </div>
           <div id="modal9" class="modal">
             <div class="modal-content">
               <h4 class="center">Long Black</h4>
-              <p>A bunch of text</p>
+              <p class="modal-content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                eligendi nostrum eum voluptates quo repudiandae distinctio unde ullam amet iste, dicta earum. Tempora
+                nisi alias quos nobis sit corporis similique illo ea obcaecati doloremque non unde placeat esse, odit
+                aliquid ducimus natus ab a delectus fugiat dolor saepe officia atque incidunt. Laboriosam id et labore
+                consectetur atque illum, neque qui? Optio, vero velit?</p>
             </div>
             <div class="modal-footer">
+              <p class="modal-footer__price">$9.99</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </article>
-  <!-- <nav class="back"><h4>Back</h4></nav> -->
+
+  <!-- PRICING -->
+  <section class="pricing hide" id="pricing">
+    <nav class="go-back-pricing waves-effect waves-light">
+      <h4> ← Back</h4>
+    </nav>
+    <!-- ROW 1 -->
+    <div class="row">
+      <div class="col m3 offset-m1">
+        <div class="card">
+          <div class="card-image">
+            <img src="assets/images/black-coffeeX3.png" alt="Black Coffee">
+            <a class="btn-floating halfway-fab waves-effect waves-light red btn-large">$9.99</a>
+          </div>
+          <div class="card-content">
+            <h6>Black Coffee</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col m3">
+        <div class="card">
+          <div class="card-image">
+            <img src="assets/images/caffe-amercanoX3.png" alt="caffe-amercano">
+            <a class="btn-floating halfway-fab waves-effect waves-light red btn-large">$9.99</a>
+          </div>
+          <div class="card-content">
+            <h6>Black Coffee</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col m3">
+        <div class="card">
+          <div class="card-image">
+            <img src="assets/images/caffe-latieX3.png" alt="caffe-latie">
+            <a class="btn-floating halfway-fab waves-effect waves-light red btn-large">$9.99</a>
+          </div>
+          <div class="card-content">
+            <h6>Black Coffee</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ROW 2 -->
+    <div class="row">
+      <div class="col m3 offset-m1">
+        <div class="card">
+          <div class="card-image">
+            <img src="assets/images/espressoX3.png" alt="espress">
+            <a class="btn-floating halfway-fab waves-effect waves-light red btn-large">$9.99</a>
+          </div>
+          <div class="card-content">
+            <h6>Black Coffee</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col m3">
+        <div class="card">
+          <div class="card-image">
+            <img src="assets/images/cappuccinoX3.png" alt="cappuccino">
+            <a class="btn-floating halfway-fab waves-effect waves-light red btn-large">$9.99</a>
+          </div>
+          <div class="card-content">
+            <h6>Black Coffee</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col m3">
+        <div class="card">
+          <div class="card-image">
+            <img src="assets/images/ice-coffeeX3.png" alt="ice-coffee">
+            <a class="btn-floating halfway-fab waves-effect waves-light red btn-large">$9.99</a>
+          </div>
+          <div class="card-content">
+            <h6>Black Coffee</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ROW 3 -->
+    <div class="row">
+      <div class="col m3 offset-m1">
+        <div class="card">
+          <div class="card-image">
+            <img src="assets/images/flat-whiteX3.png" alt="flat-white">
+            <a class="btn-floating halfway-fab waves-effect waves-light red btn-large">$9.99</a>
+          </div>
+          <div class="card-content">
+            <h6>Black Coffee</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col m3">
+        <div class="card">
+          <div class="card-image">
+            <img src="assets/images/cafee-mochaX3.png" alt="cafee-mocha">
+            <a class="btn-floating halfway-fab waves-effect waves-light red btn-large">$9.99</a>
+          </div>
+          <div class="card-content">
+            <h6>Black Coffee</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col m3">
+        <div class="card">
+          <div class="card-image">
+            <img src="assets/images/long-blackX3.png" alt="long-black">
+            <a class="btn-floating halfway-fab waves-effect waves-light red btn-large">$9.99</a>
+          </div>
+          <div class="card-content">
+            <h6>Black Coffee</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large red u-arrow-up" href="#nav">
+      <img class="u-arrow-up__content" src="assets/images/svg/arrow-up.svg" alt="arrow up">
+    </a>
+  </div>
+  <!-- SUGGEST A DRINK -->
+  <section class="suggest hide" id="suggest">
+    <nav class="go-back-suggest waves-effect waves-light">
+      <h4> ← Back</h4>
+    </nav>
+    <div class="card-panel container suggest__container">
+      <h4 class="red-text center">Suggest A Drink</h4>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col m6">
+              <input id="drink_name" type="text" class="validate black-text">
+              <label for="drink_name" class="teal-text">Drink Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col m8">
+              <input id="description" type="text">
+              <label for="description" class="blue-text">About this drink (Optional)</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col m6">
+              <input id="email" type="email" class="validate">
+              <label for="email" class="teal-text">Email</label>
+            </div>
+            <div class="col m3">
+              <button class="btn waves-effect waves-light submit tooltipped" data-position="top"
+                data-tooltip="This button does nothing" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT US -->
+  <section class="contact hide" id="contact">
+    <nav class="go-back-contact waves-effect waves-light">
+      <h4> ← Back</h4>
+    </nav>
+    <div class="contact__social row container">
+      <ul>
+        <li> <a class="col m1 offset-m1" href="twitter.com"> <img src="assets/images/svg/twitter.svg" alt="twitter"></a>
+        </li>
+        <li> <a class="col m1 offset-m1" href="twitter.com"> <img src="assets/images/svg/instagram.svg"
+              alt="instagram"></a></li>
+        <li> <a class="col m1 offset-m1" href="twitter.com"> <img src="assets/images/svg/whatsapp.svg"
+              alt="whatsapp"></a></li>
+        <li> <a class="col m1 offset-m1" href="twitter.com"> <img src="assets/images/svg/snapchat.svg"
+              alt="snapchat"></a></li>
+        <li> <a class="col m1 offset-m1" href="twitter.com"> <img src="assets/images/svg/facebook.svg"
+              alt="facebook"></a></li>
+      </ul>
+    </div>
+    <div class="card-panel container contact__container">
+      <h4 class="red-text center">Contact Us</h4>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col m6">
+              <input id="drink_name" type="text" class="validate black-text">
+              <label for="drink_name" class="teal-text">Full Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col m8">
+              <input id="description" type="text">
+              <label for="description" class="validate blue-text">message</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col m6">
+              <input id="email" type="email" class="validate">
+              <label for="email" class="teal-text">Email</label>
+            </div>
+            <div class="col m3">
+              <button class="btn waves-effect waves-light submit tooltipped" data-position="top"
+                data-tooltip="This button does nothing" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
 </body>
 
 </html>
