@@ -12,6 +12,7 @@ require('./scrollMagic')
 
 
 //TODO:
-// []
+// [X] add links to social icons
+// [ ] images for mobile
 // FIXME:
 // []

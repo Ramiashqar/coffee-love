@@ -24,7 +24,7 @@ module.exports = env => {
     mode: "production",
     output: {
       filename: "[name]-bundle.js",
-      path: path.resolve(__dirname, "../dist"),
+      path: path.resolve(__dirname, "../docs"),
       publicPath: ""
     },
     module: {
@@ -138,16 +138,16 @@ module.exports = env => {
       new miniCSSExtractPlugin({
         filename: "app-[contenthash].css"
       }),
-      new PurifyCSSPlugin({
-        paths: glob.sync([
-          path.join(__dirname, "../app/index.html"),
-          path.join(__dirname, "../app/assets/scripts/index.js")
-        ]),
-        minimize: true,
-        purifyOptions: {
-          whitelist: ["ignore-me", "me-too"]
-        }
-      }),
+      // new PurifyCSSPlugin({
+      //   paths: glob.sync([
+      //     path.join(__dirname, "../app/index.html"),
+      //     path.join(__dirname, "../app/assets/scripts/index.js")
+      //   ]),
+      //   minimize: true,
+      //   purifyOptions: {
+      //     whitelist: ["hide", "vanish"]
+      //   }
+      // }),
       new optimizeCSSAssetsPlugin({
         assetNameRegExp: /\.css$/g,
         cssProcessor: require("cssnano"),
