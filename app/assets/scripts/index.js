@@ -8,10 +8,7 @@ require("./navControl");
 require("./smoothScroll");
 import NavController from "./navControl";
 const newComponent = new NavController();
-// //Sortable.js
-// require("./Sortable");
-// //ScrollMagic.js
-// import ScrollMagic from "scrollmagic";
+require('./scrollMagic')
 
 
 //TODO:

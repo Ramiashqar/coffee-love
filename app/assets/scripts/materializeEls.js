@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function() {
       modalEl.forEach(el => {
         const instance = M.Modal.getInstance(el);
         instance.close();
-        console.log(instance.id);
       });
     });
   };

@@ -28,6 +28,8 @@
     top: 96.5%;
     left: 50%;
     transform: translateX(-50%);
+    opacity: 1;
+    transition: opacity 1s ease;
     @media only screen and (max-width: 993px){
       top: 90%;
     }
@@ -35,5 +37,8 @@
       visibility: hidden;
       display: none;
     }
+  }
+  .vanish{
+    opacity: 0;
   }
 }

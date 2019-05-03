@@ -2,6 +2,33 @@
   margin: 8rem 2rem 0 2rem;
   &__container {
     margin: 0 auto !important;
+    @media only screen and (max-width: 370px) {
+      width: 100% !important;
+      padding: 1rem 0.2rem !important;
+      h4 {
+        font-size: 1.7rem;
+      }
+    }
+  }
+  &__social{
+    @media only screen and (max-width: 540px) {
+      ul{
+        li{
+          img{
+            width: 3rem;
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: 540px) {
+      ul{
+        li{
+          img{
+            width: 2.6rem;
+          }
+        }
+      }
+    }
   }
   nav.go-back-contact {
     @include backNav;

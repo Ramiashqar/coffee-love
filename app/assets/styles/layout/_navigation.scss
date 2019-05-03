@@ -14,11 +14,25 @@
     @media only screen and (min-width: 993px) and (max-width: 1150px) {
       width: 13rem;
     }
+    @media only screen and (min-width: 1440px){
+      width: 20rem;
+    }
   }
   &__item {
     height: 2rem;
     @media only screen and (min-width: 993px) and (max-width: 1150px) {
       width: 9.3rem;
     }
+    @media only screen and (min-width: 1440px){
+      width: 13rem;
+    }
+  }
+}
+.sidenav {
+  &__logo {
+    margin-top: 1rem;
+  }
+  &__item {
+    margin: 2.3rem;
   }
 }

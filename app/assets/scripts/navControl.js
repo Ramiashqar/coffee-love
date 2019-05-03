@@ -9,6 +9,7 @@ class NavController {
     this.pricingEl = document.querySelector(".pricing");
     this.suggestEl = document.querySelector(".suggest");
     this.contactEl = document.querySelector(".contact");
+    this.rocket = document.querySelector(".fixed-action-btn");
     // NAV BUTTONS
     this.pricingBtn = document.querySelectorAll(".pricing-btn");
     this.contactBtn = document.querySelectorAll(".contact-btn");
@@ -57,6 +58,7 @@ class NavController {
     this.navigationEl.classList.toggle("hide");
     this.headerEl.classList.toggle("hide");
     this.productsEl.classList.toggle("hide");
+    this.rocket.classList.toggle("hide");
     toggler.classList.toggle("hide");
     window.scrollTo("0px", "0px");
   }
