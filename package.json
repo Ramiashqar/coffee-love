@@ -1,6 +1,6 @@
 {
   "name": "coffee-love",
-  "version": "0.0.1b1",
+  "version": "0.0.1b2",
   "description": "coffee love template site",
   "main": "index.js",
   "scripts": {
@@ -54,7 +54,9 @@
     "@babel/polyfill": "^7.4.3",
     "@babel/register": "^7.4.0",
     "@babel/runtime": "^7.4.3",
+    "core-js": "^3.0.1",
     "eslint": "^5.16.0",
+    "node-vibrant": "^3.2.0-alpha",
     "scrollmagic": "^2.0.6"
   },
   "repository": {

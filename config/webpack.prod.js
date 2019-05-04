@@ -174,56 +174,57 @@ module.exports = env => {
         template: "./app/index.html",
         inject: true,
         chunks: ["main"],
-        title: "Coffee Love"
+        title: "Coffee Love",
+        // favicon: "./app/assets/images/favicon.png",
       }),
       new minifyPlugin(),
       // new compressionPlugin({
       //   algorithm: "gzip"
       // }),
       // new brotliPlugin(),
-      new WebappWebpackPlugin({
-        logo: "./app/assets/images/favicon.png",
-        cache: false,
-        prefix: "favicon-[hash]/",
-        inject: true,
-        favicons: {
-          developerName: "Rami Ashqar",
-          developerURL: null, // prevent retrieving from the nearest package.json
-          appDescription: 'Webpack App',
-          background: "#fff",
-          icons: {
-            android: false,
-            appleIcon: false,
-            appleStartup: false,
-            coast: false,
-            favicons: true,
-            firefox: false,
-            opengraph: false,
-            twitter: false,
-            yandex: false,
-            windows: false
-          }
-        }
-        // prefix: "favicon-[hash]/",
-        // emitStats: false,
-        // // statsFilename: "iconstats-[hash].json",
-        // persistentCache: false,
-        // inject: true,
-        // background: "#fff",
-        // title: "Webpack App",
-        // icons: {
-        //   android: false,
-        //   appleIcon: false,
-        //   appleStartup: false,
-        //   coast: false,
-        //   favicons: true,
-        //   firefox: false,
-        //   opengraph: false,
-        //   twitter: false,
-        //   yandex: false,
-        //   windows: false,
-        // },
-      }),
+      // new WebappWebpackPlugin({
+      //   logo: "app/assets/images/favicon.png",
+      //   cache: false,
+      //   prefix: "favicon-[hash]",
+      //   inject: true,
+      //   favicons: {
+      //     developerName: "Rami Ashqar",
+      //     developerURL: null, // prevent retrieving from the nearest package.json
+      //     appDescription: 'Webpack App',
+      //     background: "#fff",
+      //     icons: {
+      //       android: false,
+      //       appleIcon: false,
+      //       appleStartup: false,
+      //       coast: false,
+      //       favicons: true,
+      //       firefox: false,
+      //       opengraph: false,
+      //       twitter: false,
+      //       yandex: false,
+      //       windows: false
+      //     }
+      //   }
+      //   // prefix: "favicon-[hash]/",
+      //   // emitStats: false,
+      //   // // statsFilename: "iconstats-[hash].json",
+      //   // persistentCache: false,
+      //   // inject: true,
+      //   // background: "#fff",
+      //   // title: "Webpack App",
+      //   // icons: {
+      //   //   android: false,
+      //   //   appleIcon: false,
+      //   //   appleStartup: false,
+      //   //   coast: false,
+      //   //   favicons: true,
+      //   //   firefox: false,
+      //   //   opengraph: false,
+      //   //   twitter: false,
+      //   //   yandex: false,
+      //   //   windows: false,
+      //   // },
+      // }),
       new ImageminPlugin({
         bail: false, // Ignore errors on corrupted images
         cache: true,

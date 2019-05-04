@@ -38,8 +38,11 @@
 //   max-width: 100%;
 //   height: auto;
 // }
-
+@font-face {
+  font-family: "Roboto";
+  src: url('../../fonts/Roboto-Regular.ttf')
+}
 ::selection {
-  background-color: black;
-  color: red;
+  background-color: #fd9829;
+  color: white;
 }

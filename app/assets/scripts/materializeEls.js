@@ -1,15 +1,9 @@
 "use strict";
-
-import ColorThief from "./3rd-party/color-thief";
-// CHECK IF IT IS SAFARI, BECAUSE CANVAS DOES NOT WORK WELL ON SAFARI
-const isSafari =
-  navigator.vendor &&
-  navigator.vendor.indexOf("Apple") > -1 &&
-  navigator.userAgent &&
-  navigator.userAgent.indexOf("CriOS") == -1 &&
-  navigator.userAgent.indexOf("FxiOS") == -1;
+// require("./3rd-party/vibrant");
+import Vibrant from 'node-vibrant/dist/vibrant.worker.min';
 // MODALS
 document.addEventListener("DOMContentLoaded", function() {
+  const DOMBody = document.querySelector("body");
   const modalEl = document.querySelectorAll(".modal");
   const instances = M.Modal.init(modalEl, {
     opacity: 1,
@@ -20,9 +14,14 @@ document.addEventListener("DOMContentLoaded", function() {
     onOpenEnd: () => {
       closeFromNav();
       overlayColor();
+      setTimeout(() => {
+        removeCanvas();
+      }, 0);
+      
     },
     onCloseStart: () => {
       removeNav();
+      removeCanvas(); //REMOVE CANVAS CREATED BY VIBRANT.JS
     }
   });
   //Create the back-nav
@@ -30,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const newNav = document.createElement("nav");
     newNav.className = "back waves-effect waves-light";
     newNav.innerHTML = `<h4> ← Back</h4>`;
-    document.querySelector("body").appendChild(newNav);
+    DOMBody.appendChild(newNav);
   };
   //Close the modal from back-nav
   const closeFromNav = () => {
@@ -46,56 +45,61 @@ document.addEventListener("DOMContentLoaded", function() {
   const removeNav = () => {
     const newNav = document.querySelector(".back");
     const clonedImage = document.querySelector(".top-image");
-    document.querySelector("body").removeChild(newNav);
-    document.querySelector("body").removeChild(clonedImage);
+    DOMBody.removeChild(newNav);
+    DOMBody.removeChild(clonedImage);
   };
   //Clone Image and change back-nav color
   const cloneImage = () => {
     const anchor = document.querySelectorAll("a");
+    const newNav = document.querySelector(".back");
+    let topImage;
     for (let i = 0; i < 9; i++) {
       if (instances[i].isOpen) {
         anchor.forEach(el => {
           if (el.href.includes(`#modal${i + 1}`)) {
-            const newNav = document.querySelector(".back");
             const firstImage = el.firstElementChild;
-            const topImage = firstImage.cloneNode(true);
+            topImage = firstImage.cloneNode(true);
             topImage.setAttribute("crossOrigin", "anonymous");
             topImage.classList.add("top-image");
-            document.querySelector("body").appendChild(topImage);
-            if (!isSafari) {
-              const colorThief = new ColorThief();
-              const newColor = colorThief.getPalette(topImage, 8);
-              newNav.style.backgroundColor = `rgb(${newColor[2][0]}, ${
-                newColor[2][1]
-              }, ${newColor[2][2]})`;
-            } else {
-              newNav.style.backgroundColor = "#3cbefa";
-            }
+            topImage.crossOrigin = "anonymous";
+            DOMBody.appendChild(topImage);
           }
         });
       }
     }
+    let v = new Vibrant(topImage.src);
+    v.getPalette((err, palette) => {
+      const newColors = palette.Muted._rgb;
+      newNav.style.backgroundColor = `rgb(${newColors[0]}, ${newColors[1]}, ${
+        newColors[2]
+      })`;
+    });
   };
   //Change overlay background color and clone Image
   const overlayColor = () => {
     const anchor = document.querySelectorAll("a");
+    const topImage = document.querySelector(".top-image");
     for (let i = 0; i < 9; i++) {
       anchor.forEach(el => {
         if (el.href.includes(`#modal${i + 1}`)) {
-          const topImage = document.querySelector(".top-image");
-
-          if (!isSafari) {
-            const colorThief = new ColorThief();
-            const newColor = colorThief.getPalette(topImage, 2);
-            const modalOverlay = document.querySelector(".modal-overlay");
-            modalOverlay.style.backgroundColor = `rgb(${newColor[0][0]}, ${
-              newColor[0][1]
-            }, ${newColor[0][2]})`;
-          }
         }
       });
     }
+    let v = new Vibrant(topImage.src);
+    v.getPalette((err, palette) => {
+      const newColors = palette.Vibrant._rgb;
+      const modalOverlay = document.querySelector(".modal-overlay");
+      modalOverlay.style.backgroundColor = `rgb(${newColors[0]}, ${
+        newColors[1]
+      }, ${newColors[2]})`;
+    });
   };
+  const removeCanvas = ()=>{
+    const canvas= document.querySelectorAll('canvas')
+    canvas.forEach((el)=>{
+      el.remove()
+    })
+  }
 });
 
 // TOOLTIPS
