@@ -1,6 +1,6 @@
 {
   "name": "coffee-love",
-  "version": "0.0.1b2",
+  "version": "1.0.0",
   "description": "coffee love template site",
   "main": "index.js",
   "scripts": {
